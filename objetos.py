@@ -24,6 +24,7 @@ while True:
 		except ValueError:
 			print('Length must be a real number')
 	while True:
+		print('Current length: '+ str(length))
 		main = raw_input('Chose one \n [s] Square, [c] Cube, [e] Exit, [n] New length \n Input: ')
 		if main == 'e' or main == 'n':
 			break
@@ -46,10 +47,10 @@ while True:
 				option = raw_input('Chose one \n [v] Volume, [p] Perimeter, [c] Cancel \n Input: ')
 				c = Cube(length)
 				if option == 'v':
-					o = c.volume(s.length)
-					break
+					o = c.volume(c.length)
+					break	
 				elif option == 'p':
-					o = c.perimeter(s.length)
+					o = c.perimeter(c.length)
 					break
 				elif option == 'c':
 					break
